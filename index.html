@@ -5,13 +5,29 @@
     <meta charset="utf-8">
     <style>
     /* GLOBAL STYLES */
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
     a {
         color: red;
       }
+    h1 {
+      margin-top: 0;
+    }
 
+     .full-hero li{
+        display: inline;
+      }
+  
       /* SOCIAL STYLES */
       .social-link {
         color: blue;
+        display:block; 
+      }
+
+      .show {
+        display:block;
       }
 
       /* BIO STYLES */
@@ -21,25 +37,53 @@
       .bio-copy a {
         color: green;
       }
+
+      .test-box {
+        background: #9db6dd;
+        margin: 50px;
+        width: 200px;
+      }
+      .test-box-nosizing {
+        border: 10px solid #000;
+        padding: 40px;
+      }
+      .test-box-sizing {
+        box-sizing: border-box;
+        margin-top: 200px;
+        width:auto;
+      }
+
     </style>
   </head>
   <body>
-    <h1>I'm an h1</h1>
-    <ul>
-      <li>
-        <a href="https://example.com/">Link</a>
-      </li>
-      <li>
-        <a href="https://example.com/">Link</a>
-      </li>
-      <li>
-        <a href="https://example.com/">Link</a>
-      </li>
-    </ul>
+    <div class="full-hero">
+      <h1>I'm an h1</h1>
+      <ul>
+        <li>
+          <a href="https://example.com/">Link</a>
+        </li>
+        <li>
+          <a href="https://example.com/">Link</a>
+        </li>
+        <li>
+          <a href="https://example.com/">Link</a>
+        </li>
+      </ul>
+    </div>
+    
     <h2>I'm an h2</h2>
+    <div class="test-box">
+      200px wide
+    </div>
+    <div class="test-box test-box-nosizing">
+      200px wide + border + padding = 300px
+    </div>
+    <div class="test-box test-box-nosizing test-box-sizing">
+      200px wide + border + padding + box-sizing: border-box = 200px
+    </div>
     <div class="bio-box">
       <h3>Michael Hartl</h3>
-      <a href="https://twitter.com/mhartl" class="social-link">here</a>
+      <a href="https://twitter.com/mhartl" class="social-link show">here</a>
       <div class="bio-copy">
         <p>
           Known for his dazzling charm, rapier wit, and unrivaled humility,
